@@ -1,0 +1,11 @@
+{
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "prettier.printWidth": 80,
+    "editor.rulers": [
+        80
+    ],
+    "solidity.compileUsingRemoteVersion": "latest"
+}
