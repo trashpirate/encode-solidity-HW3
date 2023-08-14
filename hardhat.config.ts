@@ -5,6 +5,13 @@ import "@nomicfoundation/hardhat-toolbox";
 const config: HardhatUserConfig = {
   solidity: "0.8.19",
   paths: {tests: "tests"},
+  networks: {
+    hardhat: {
+      mining: {
+        auto: true,
+      }
+    }
+  }
 };
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
