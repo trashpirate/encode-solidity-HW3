@@ -86,6 +86,12 @@ describe("TokenizedBallot", async () => {
             }
 
         });
+
+        it("has the provided ballot size", async () => {
+            const ballotSize = await ballotContract.ballotSize();
+            expect(ballotSize).to.be.eq(PROPOSALS.length);
+        });
+
         it("has zero votes for all proposals", async () => {
             for (let index = 0; index < PROPOSALS.length; index++) {
                 const proposal = await ballotContract.proposals(index);

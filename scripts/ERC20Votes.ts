@@ -1,7 +1,7 @@
 import {ethers} from "hardhat";
 import {MyToken__factory} from "../typechain-types";
 
-const MINT_VALUE = ethers.parseUnits("1");
+const MINT_VALUE = ethers.parseUnits("100");
 async function main() {
     const [deployer, acc1, acc2] = await ethers.getSigners();
     const contractFactory = new MyToken__factory(deployer);
@@ -65,6 +65,25 @@ async function main() {
         } has ${ votes2AfterTransfer.toString() } units of voting power after receiving a transfer\n`
     );
 
+    console.log("\n** DELEGATE AND CHECK VOTING POWER (ACC2)");
+    console.log("----------------------------------------------------\n");
+    // Self delegate acc2
+    const delegateTx2 = await contract.connect(acc2).delegate(acc2.address);
+    await delegateTx2.wait();
+
+    // Check the voting power
+    const votes1 = await contract.getVotes(acc1.address);
+    console.log(
+        `Account ${ acc1.address } has ${ votes1.toString() } units of voting power\n`
+    );
+    const votes2 = await contract.getVotes(acc2.address);
+    console.log(
+        `Account ${ acc2.address } has ${ votes2.toString() } units of voting power\n`
+    );
+
+    // mine an additional block
+    await ethers.provider.send("evm_mine")
+
     console.log("\n** CHECK PAST VOTING POWER (ACC1)");
     console.log("----------------------------------------------------\n")
     // Check past voting power
@@ -82,6 +101,7 @@ async function main() {
             } had ${ pastVotes.toString() } units of voting power at block ${ index }\n`
         );
     }
+
 }
 
 main().catch((error) => {
