@@ -45,8 +45,8 @@ https://sepolia.etherscan.io/tx/0xa4c1266cae289bfbb2d4badd1e946f17926930684a94bc
 
 **Query Results**:<br />
 Winning propsal: 0<br />
-Winner name: chocolate
-{ index: 0, name: 'chocolate', voteCount: '40.0' }
-{ index: 1, name: 'vanilla', voteCount: '20.0' }
+Winner name: chocolate<br />
+{ index: 0, name: 'chocolate', voteCount: '40.0' }<br />
+{ index: 1, name: 'vanilla', voteCount: '20.0' }<br />
 { index: 2, name: 'cookie', voteCount: '15.0' }
 
