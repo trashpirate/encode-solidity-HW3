@@ -32,7 +32,21 @@ https://sepolia.etherscan.io/tx/0xa225aa5ff22a99e975cdcceb1a05ab7dacbb80988a5ee3
 -> successful<br />
 https://sepolia.etherscan.io/tx/0x332057b1756d5f23f6552421e0ad97808e9e800a77e83824218b30d3b2dbf057
 
+## TokenizedBallot Contract:
+[https://sepolia.etherscan.io/address/0xba45143cC39BA70025d1d125c873Ee548aC0a166](https://sepolia.etherscan.io/address/0xFdC3c631C7B17eA843829d096395e70b1eD47A8B)https://sepolia.etherscan.io/address/0xFdC3c631C7B17eA843829d096395e70b1eD47A8B
+
+Proposals: chocolate, vanilla, cookie
+
+**Voting with three accounts**
+https://sepolia.etherscan.io/tx/0xd88c8037a6775bceeed906c13edacc40f6e652bb21ddc1a3458e40bbd46888ae
+https://sepolia.etherscan.io/tx/0x112036914d5160c1c60e2d7ea7df454731ce7c33afb1181eb700e577c2464647
+https://sepolia.etherscan.io/tx/0x1944124a5354bddaa5264e9085ab90b0635e198f60415f27b2a2755cb6bab1bf
+https://sepolia.etherscan.io/tx/0xa4c1266cae289bfbb2d4badd1e946f17926930684a94bcef5c8086e0f92b4972
+
 **Query Results**:<br />
-Winning propsal: 1<br />
+Winning propsal: 0<br />
 Winner name: chocolate
+{ index: 0, name: 'chocolate', voteCount: '40.0' }
+{ index: 1, name: 'vanilla', voteCount: '20.0' }
+{ index: 2, name: 'cookie', voteCount: '15.0' }
 
